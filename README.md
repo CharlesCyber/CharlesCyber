@@ -1,7 +1,23 @@
-### Hi there 👋
+<h1>Hi, I'm Charles!
+
+<h2>👨‍💻 Cybersecurity Projects:</h2>
+
+- <b>Active Directory Homelab </b>
+- <b> Linux Administrator </b>
+  
+
+<h2> Certifications </h2>
+- <b> Certified in Cyber </b>
+
+<h2> 🤳 Connect with me:</h2>
+
+[twitter]: https://twitter.com/joshmadakor
+[youtube]: https://www.youtube.com/c/joshmadakor
+[instagram]: https://www.instagram.com/joshmadakor/
+[linkedin]: https://linkedin.com/in/joshmadakor
 
 <!--
-**CharlesCyber/CharlesCyber** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**joshmadakor1/joshmadakor1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
@@ -14,3 +30,4 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
