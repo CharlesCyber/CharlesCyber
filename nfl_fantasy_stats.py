@@ -41,7 +41,7 @@ class NFLFantasyStatsScraper:
             print(f"Error fetching players: {e}")
             return {}
 
-    def fetch_all_players(self) -> List[Dict[str, Any]]:
+    def fetch_all_players(self, limit: int = 13) -> List[Dict[str, Any]]:
         """Parse and organize all current NFL players"""
         players_dict = self.fetch_all_nfl_players()
 
@@ -53,6 +53,10 @@ class NFLFantasyStatsScraper:
         print("Processing player data...")
 
         for player_id, player_info in players_dict.items():
+            # Limit to specified number of players
+            if len(all_players) >= limit:
+                break
+
             # Filter for active NFL players
             if player_info.get('active', False) and player_info.get('sport') == 'nfl':
                 player_data = {
@@ -223,9 +227,21 @@ def generate_sample_data():
         ('Amon-Ra St. Brown', 'DET', 14), ('A.J. Brown', 'PHI', 11)
     ]
 
+    # Sample TE
+    tes = [
+        ('Travis Kelce', 'KC', 87)
+    ]
+
     player_id = 1000
-    for name, team, jersey in qbs + rbs + wrs:
-        pos = 'QB' if name in [q[0] for q in qbs] else 'RB' if name in [r[0] for r in rbs] else 'WR'
+    for name, team, jersey in qbs + rbs + wrs + tes:
+        if name in [q[0] for q in qbs]:
+            pos = 'QB'
+        elif name in [r[0] for r in rbs]:
+            pos = 'RB'
+        elif name in [w[0] for w in wrs]:
+            pos = 'WR'
+        else:
+            pos = 'TE'
 
         player_data = {
             'player_id': str(player_id),
@@ -296,7 +312,7 @@ def generate_sample_data():
                 'fantasy_points_half_ppr': round(random.uniform(170, 330), 2),
                 'fantasy_points_std': round(random.uniform(150, 300), 2),
             }
-        else:  # WR
+        elif pos == 'WR':
             stat_data = {
                 'player_id': str(player_id),
                 'name': name,
@@ -321,6 +337,32 @@ def generate_sample_data():
                 'fantasy_points_ppr': round(random.uniform(200, 370), 2),
                 'fantasy_points_half_ppr': round(random.uniform(180, 340), 2),
                 'fantasy_points_std': round(random.uniform(160, 310), 2),
+            }
+        else:  # TE
+            stat_data = {
+                'player_id': str(player_id),
+                'name': name,
+                'team': team,
+                'position': pos,
+                'season': '2024',
+                'games_played': random.randint(14, 17),
+                'passing_attempts': 0,
+                'passing_completions': 0,
+                'passing_yards': 0,
+                'passing_tds': 0,
+                'interceptions': 0,
+                'rushing_attempts': 0,
+                'rushing_yards': 0,
+                'rushing_tds': 0,
+                'targets': random.randint(80, 150),
+                'receptions': random.randint(60, 110),
+                'receiving_yards': random.randint(700, 1400),
+                'receiving_tds': random.randint(4, 12),
+                'fumbles': random.randint(0, 2),
+                'fumbles_lost': random.randint(0, 1),
+                'fantasy_points_ppr': round(random.uniform(160, 280), 2),
+                'fantasy_points_half_ppr': round(random.uniform(140, 250), 2),
+                'fantasy_points_std': round(random.uniform(120, 220), 2),
             }
 
         sample_stats.append(stat_data)
