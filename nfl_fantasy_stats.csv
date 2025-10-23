@@ -1,0 +1,13 @@
+player_id,name,team,position,season,games_played,passing_attempts,passing_completions,passing_yards,passing_tds,interceptions,rushing_attempts,rushing_yards,rushing_tds,targets,receptions,receiving_yards,receiving_tds,fumbles,fumbles_lost,fantasy_points_ppr,fantasy_points_half_ppr,fantasy_points_std
+1000,Patrick Mahomes,KC,QB,2024,16,433,400,4247,45,9,36,253,8,0,0,0,0,3,2,300.81,338.38,314.95
+1001,Josh Allen,BUF,QB,2024,16,422,342,3779,44,13,58,344,7,0,0,0,0,1,0,293.7,327.07,307.41
+1002,Jalen Hurts,PHI,QB,2024,15,504,334,3912,45,5,79,353,2,0,0,0,0,3,2,291.05,354.99,345.94
+1003,Dak Prescott,DAL,QB,2024,14,443,358,3613,28,9,50,221,6,0,0,0,0,3,2,281.01,346.4,312.61
+1004,Christian McCaffrey,SF,RB,2024,15,0,0,0,0,0,298,1588,17,38,61,800,1,2,2,280.77,224.4,156.96
+1005,Derrick Henry,BAL,RB,2024,14,0,0,0,0,0,235,1767,15,62,61,632,4,0,0,268.72,178.0,297.77
+1006,Saquon Barkley,PHI,RB,2024,12,0,0,0,0,0,245,1258,10,88,71,582,5,3,2,210.76,281.33,251.37
+1007,Josh Jacobs,LV,RB,2024,12,0,0,0,0,0,197,1369,17,61,33,300,1,3,0,234.17,252.17,298.23
+1008,Tyreek Hill,MIA,WR,2024,17,0,0,0,0,0,4,99,1,170,82,946,10,2,1,212.13,312.39,217.99
+1009,CeeDee Lamb,DAL,WR,2024,16,0,0,0,0,0,4,4,1,172,130,1582,13,1,1,231.0,189.74,172.03
+1010,Amon-Ra St. Brown,DET,WR,2024,15,0,0,0,0,0,13,20,1,159,108,1543,15,1,1,335.4,298.31,250.13
+1011,A.J. Brown,PHI,WR,2024,14,0,0,0,0,0,10,2,2,169,107,1698,10,1,0,215.29,289.54,190.15
