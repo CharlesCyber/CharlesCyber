@@ -31,7 +31,7 @@ The script will:
 3. Fetch fantasy statistics for relevant positions (QB, RB, WR, TE, K)
 4. Save fantasy stats to `nfl_fantasy_stats.csv`
 
-**Note:** If API access is blocked (403 error), the script will automatically generate 13 sample players for demonstration purposes.
+**Note:** If API access is blocked (403 error), the script will automatically generate 218 sample players (all positions, all teams) for demonstration purposes.
 
 ## Output Files
 
@@ -111,11 +111,15 @@ If you see "Unable to fetch live data from API":
 
 ### Sample Data Mode
 When API access is blocked, the script generates realistic sample data including:
-- 13 sample NFL players (4 QBs, 4 RBs, 4 WRs, 1 TE)
-- Realistic fantasy statistics
-- Properly formatted CSV files for testing
+- **218 NFL players** across all 32 teams:
+  - 32 Quarterbacks (at least one per team)
+  - 63 Running Backs
+  - 81 Wide Receivers
+  - 42 Tight Ends
+- Realistic fantasy statistics for all players
+- Properly formatted CSV files for analysis
 
-**This is ONLY for demonstration.** When you run the script with proper internet access, it will fetch **ALL 1500+ active NFL players** with their real statistics.
+**For live data:** When you run the script with proper internet access, it will fetch **ALL 1500+ active NFL players** with their current season statistics from the Sleeper API.
 
 ### Other Issues
 - Ensure you have the latest version of the `requests` library: `pip install --upgrade requests`
