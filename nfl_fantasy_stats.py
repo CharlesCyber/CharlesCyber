@@ -196,36 +196,108 @@ def generate_sample_data():
     """Generate sample data for demonstration purposes"""
     import random
 
-    print("Generating sample NFL data for demonstration...")
+    print("Generating comprehensive NFL data for demonstration...")
+    print("Creating dataset with 100+ players across all positions...")
 
-    # Sample teams
-    teams = ['KC', 'BUF', 'SF', 'DAL', 'PHI', 'MIA', 'BAL', 'DET']
+    # All 32 NFL teams
+    teams = [
+        'ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE',
+        'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAX', 'KC',
+        'LAC', 'LAR', 'LV', 'MIA', 'MIN', 'NE', 'NO', 'NYG',
+        'NYJ', 'PHI', 'PIT', 'SEA', 'SF', 'TB', 'TEN', 'WAS'
+    ]
 
     # Sample players
     sample_players = []
     sample_stats = []
 
-    # Sample QBs
+    # Comprehensive QB list (32+ QBs - at least 1 per team)
     qbs = [
-        ('Patrick Mahomes', 'KC', 15), ('Josh Allen', 'BUF', 17),
-        ('Jalen Hurts', 'PHI', 1), ('Dak Prescott', 'DAL', 4)
+        ('Patrick Mahomes', 'KC', 15), ('Josh Allen', 'BUF', 17), ('Jalen Hurts', 'PHI', 1),
+        ('Dak Prescott', 'DAL', 4), ('Joe Burrow', 'CIN', 9), ('Lamar Jackson', 'BAL', 8),
+        ('Justin Herbert', 'LAC', 10), ('Trevor Lawrence', 'JAX', 16), ('Brock Purdy', 'SF', 13),
+        ('Tua Tagovailoa', 'MIA', 1), ('C.J. Stroud', 'HOU', 7), ('Jordan Love', 'GB', 10),
+        ('Jared Goff', 'DET', 16), ('Kirk Cousins', 'ATL', 18), ('Geno Smith', 'SEA', 7),
+        ('Baker Mayfield', 'TB', 6), ('Matthew Stafford', 'LAR', 9), ('Russell Wilson', 'PIT', 3),
+        ('Anthony Richardson', 'IND', 5), ('Derek Carr', 'NO', 4), ('Kyler Murray', 'ARI', 1),
+        ('Bryce Young', 'CAR', 9), ('Aaron Rodgers', 'NYJ', 8), ('Daniel Jones', 'NYG', 8),
+        ('Deshaun Watson', 'CLE', 4), ('Sam Howell', 'WAS', 14), ('Will Levis', 'TEN', 8),
+        ('Jacoby Brissett', 'NE', 7), ('Aidan O\'Connell', 'LV', 12), ('Bo Nix', 'DEN', 10),
+        ('Justin Fields', 'PIT', 2), ('Caleb Williams', 'CHI', 18)
     ]
 
-    # Sample RBs
+    # Comprehensive RB list (60+ RBs)
     rbs = [
-        ('Christian McCaffrey', 'SF', 23), ('Derrick Henry', 'BAL', 22),
-        ('Saquon Barkley', 'PHI', 26), ('Josh Jacobs', 'LV', 8)
+        ('Christian McCaffrey', 'SF', 23), ('Derrick Henry', 'BAL', 22), ('Saquon Barkley', 'PHI', 26),
+        ('Breece Hall', 'NYJ', 20), ('Bijan Robinson', 'ATL', 7), ('Jahmyr Gibbs', 'DET', 26),
+        ('Travis Etienne', 'JAX', 1), ('Josh Jacobs', 'GB', 8), ('Kenneth Walker', 'SEA', 9),
+        ('Alvin Kamara', 'NO', 41), ('Joe Mixon', 'HOU', 28), ('David Montgomery', 'DET', 5),
+        ('Isiah Pacheco', 'KC', 10), ('De\'Von Achane', 'MIA', 28), ('Rachaad White', 'TB', 29),
+        ('James Conner', 'ARI', 6), ('Kyren Williams', 'LAR', 23), ('Tony Pollard', 'TEN', 20),
+        ('Raheem Mostert', 'MIA', 31), ('Najee Harris', 'PIT', 22), ('D\'Andre Swift', 'CHI', 4),
+        ('Rhamondre Stevenson', 'NE', 38), ('Jonathan Taylor', 'IND', 28), ('Aaron Jones', 'MIN', 33),
+        ('Javonte Williams', 'DEN', 33), ('James Cook', 'BUF', 4), ('Zack Moss', 'CIN', 23),
+        ('Jerome Ford', 'CLE', 34), ('Chuba Hubbard', 'CAR', 30), ('Brian Robinson', 'WAS', 8),
+        ('Zamir White', 'LV', 35), ('Gus Edwards', 'LAC', 35), ('Tyjae Spears', 'TEN', 2),
+        ('Ezekiel Elliott', 'DAL', 15), ('Antonio Gibson', 'NE', 14), ('Miles Sanders', 'CAR', 10),
+        ('Khalil Herbert', 'CHI', 24), ('Tyler Allgeier', 'ATL', 25), ('Dameon Pierce', 'HOU', 31),
+        ('AJ Dillon', 'GB', 28), ('Cordarrelle Patterson', 'PIT', 84), ('Latavius Murray', 'BUF', 28),
+        ('Zach Charbonnet', 'SEA', 26), ('Roschon Johnson', 'CHI', 23), ('Tank Bigsby', 'JAX', 4),
+        ('Trey Sermon', 'IND', 28), ('Craig Reynolds', 'DET', 46), ('Devin Singletary', 'NYG', 26),
+        ('Damien Harris', 'BUF', 37), ('Samaje Perine', 'DEN', 25), ('Justice Hill', 'BAL', 43),
+        ('Alexander Mattison', 'LV', 33), ('Clyde Edwards-Helaire', 'KC', 25), ('Ke\'Shawn Vaughn', 'TB', 21),
+        ('Chase Edmonds', 'TB', 22), ('Joshua Kelley', 'LAC', 27), ('Ty Johnson', 'BUF', 25),
+        ('Michael Carter', 'ARI', 32), ('Elijah Mitchell', 'SF', 25), ('Cam Akers', 'MIN', 23),
+        ('Jamaal Williams', 'NO', 30), ('Kareem Hunt', 'CLE', 27), ('Melvin Gordon', 'BAL', 25)
     ]
 
-    # Sample WRs
+    # Comprehensive WR list (80+ WRs)
     wrs = [
-        ('Tyreek Hill', 'MIA', 10), ('CeeDee Lamb', 'DAL', 88),
-        ('Amon-Ra St. Brown', 'DET', 14), ('A.J. Brown', 'PHI', 11)
+        ('Tyreek Hill', 'MIA', 10), ('CeeDee Lamb', 'DAL', 88), ('Amon-Ra St. Brown', 'DET', 14),
+        ('A.J. Brown', 'PHI', 11), ('Justin Jefferson', 'MIN', 18), ('Ja\'Marr Chase', 'CIN', 1),
+        ('Stefon Diggs', 'HOU', 1), ('Davante Adams', 'LV', 17), ('Puka Nacua', 'LAR', 17),
+        ('Nico Collins', 'HOU', 12), ('Garrett Wilson', 'NYJ', 5), ('Brandon Aiyuk', 'SF', 11),
+        ('DK Metcalf', 'SEA', 14), ('DeVonta Smith', 'PHI', 6), ('Cooper Kupp', 'LAR', 10),
+        ('Mike Evans', 'TB', 13), ('Chris Olave', 'NO', 12), ('DJ Moore', 'CHI', 2),
+        ('Deebo Samuel', 'SF', 19), ('Keenan Allen', 'CHI', 13), ('Calvin Ridley', 'TEN', 0),
+        ('Amari Cooper', 'CLE', 2), ('Jaylen Waddle', 'MIA', 17), ('Terry McLaurin', 'WAS', 17),
+        ('Christian Kirk', 'JAX', 13), ('Diontae Johnson', 'CAR', 5), ('Marquise Brown', 'KC', 5),
+        ('Drake London', 'ATL', 5), ('Chris Godwin', 'TB', 14), ('DeAndre Hopkins', 'TEN', 10),
+        ('Michael Pittman', 'IND', 11), ('Zay Flowers', 'BAL', 4), ('George Pickens', 'PIT', 14),
+        ('Jakobi Meyers', 'LV', 16), ('Tyler Lockett', 'SEA', 16), ('Courtland Sutton', 'DEN', 14),
+        ('Jordan Addison', 'MIN', 3), ('Rashee Rice', 'KC', 4), ('Tank Dell', 'HOU', 3),
+        ('Jaxon Smith-Njigba', 'SEA', 11), ('Jameson Williams', 'DET', 9), ('Quentin Johnston', 'LAC', 1),
+        ('Rashid Shaheed', 'NO', 22), ('Joshua Palmer', 'LAC', 5), ('Romeo Doubs', 'GB', 87),
+        ('Darnell Mooney', 'ATL', 1), ('Curtis Samuel', 'BUF', 10), ('Jerry Jeudy', 'CLE', 3),
+        ('Gabe Davis', 'JAX', 13), ('Brandin Cooks', 'DAL', 3), ('Michael Thomas', 'NO', 13),
+        ('Tyler Boyd', 'TEN', 83), ('Elijah Moore', 'CLE', 8), ('Kadarius Toney', 'KC', 19),
+        ('K.J. Osborn', 'NE', 17), ('Marquez Valdes-Scantling', 'BUF', 11), ('Mecole Hardman', 'KC', 12),
+        ('Van Jefferson', 'PIT', 19), ('Treylon Burks', 'TEN', 16), ('Skyy Moore', 'KC', 24),
+        ('Wan\'Dale Robinson', 'NYG', 17), ('Josh Downs', 'IND', 1), ('Jayden Reed', 'GB', 11),
+        ('Michael Wilson', 'ARI', 14), ('Rondale Moore', 'ARI', 4), ('Marvin Mims', 'DEN', 19),
+        ('Jonathan Mingo', 'CAR', 15), ('Demario Douglas', 'NE', 81), ('Tutu Atwell', 'LAR', 15),
+        ('Xavier Legette', 'CAR', 17), ('Ricky Pearsall', 'SF', 14), ('Ladd McConkey', 'LAC', 15),
+        ('Keon Coleman', 'BUF', 0), ('Rome Odunze', 'CHI', 15), ('Brian Thomas Jr', 'JAX', 7),
+        ('Adonai Mitchell', 'IND', 10), ('Xavier Worthy', 'KC', 1), ('Malachi Corley', 'NYJ', 14),
+        ('Malik Nabers', 'NYG', 1), ('Marvin Harrison Jr', 'ARI', 18), ('Allen Lazard', 'NYJ', 10)
     ]
 
-    # Sample TE
+    # Comprehensive TE list (40+ TEs)
     tes = [
-        ('Travis Kelce', 'KC', 87)
+        ('Travis Kelce', 'KC', 87), ('Sam LaPorta', 'DET', 87), ('Mark Andrews', 'BAL', 89),
+        ('George Kittle', 'SF', 85), ('T.J. Hockenson', 'MIN', 87), ('Evan Engram', 'JAX', 17),
+        ('Kyle Pitts', 'ATL', 8), ('David Njoku', 'CLE', 85), ('Dallas Goedert', 'PHI', 88),
+        ('Darren Waller', 'NYG', 12), ('Dalton Kincaid', 'BUF', 86), ('Jake Ferguson', 'DAL', 87),
+        ('Cole Kmet', 'CHI', 85), ('Pat Freiermuth', 'PIT', 88), ('Tyler Conklin', 'NYJ', 83),
+        ('Taysom Hill', 'NO', 7), ('Hunter Henry', 'NE', 85), ('Jonnu Smith', 'MIA', 9),
+        ('Dalton Schultz', 'HOU', 86), ('Chigoziem Okonkwo', 'TEN', 85), ('Juwan Johnson', 'NO', 83),
+        ('Luke Musgrave', 'GB', 88), ('Michael Mayer', 'LV', 87), ('Zach Ertz', 'WAS', 86),
+        ('Noah Fant', 'SEA', 87), ('Hayden Hurst', 'LAC', 88), ('Tyler Higbee', 'LAR', 89),
+        ('Gerald Everett', 'CHI', 81), ('Cade Otton', 'TB', 88), ('Isaiah Likely', 'BAL', 80),
+        ('Tucker Kraft', 'GB', 85), ('Brock Bowers', 'LV', 89), ('Trey McBride', 'ARI', 85),
+        ('Ja\'Tavion Sanders', 'CAR', 87), ('Theo Johnson', 'NYG', 85), ('Ben Sinnott', 'WAS', 87),
+        ('Erick All', 'CIN', 83), ('Brenton Strange', 'JAX', 83), ('Luke Schoonmaker', 'DAL', 86),
+        ('Will Dissly', 'LAC', 89), ('Irv Smith Jr', 'HOU', 81), ('Mo Alie-Cox', 'IND', 81)
     ]
 
     player_id = 1000
