@@ -41,7 +41,7 @@ class NFLFantasyStatsScraper:
             print(f"Error fetching players: {e}")
             return {}
 
-    def fetch_all_players(self, limit: int = 13) -> List[Dict[str, Any]]:
+    def fetch_all_players(self) -> List[Dict[str, Any]]:
         """Parse and organize all current NFL players"""
         players_dict = self.fetch_all_nfl_players()
 
@@ -53,10 +53,6 @@ class NFLFantasyStatsScraper:
         print("Processing player data...")
 
         for player_id, player_info in players_dict.items():
-            # Limit to specified number of players
-            if len(all_players) >= limit:
-                break
-
             # Filter for active NFL players
             if player_info.get('active', False) and player_info.get('sport') == 'nfl':
                 player_data = {
